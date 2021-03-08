@@ -2085,7 +2085,7 @@
             <ID>1</ID>
             <HotspotX>1</HotspotX>
             <HotspotY>1</HotspotY>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
             <CursorImage>2041</CursorImage>
             <Image>2041</Image>
             <Description xml:space="preserve">Blue Cup</Description>
@@ -2126,60 +2126,6 @@
             <Image>7</Image>
             <Description>Vacuna</Description>
             <Name>iVacuna</Name>
-            <Properties />
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <ID>4</ID>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <CursorImage>0</CursorImage>
-            <Image>0</Image>
-            <Description xml:space="preserve">Lista de moleculas</Description>
-            <Name>iLista</Name>
-            <Properties />
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <ID>5</ID>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <CursorImage>0</CursorImage>
-            <Image>0</Image>
-            <Description xml:space="preserve">Farmaco I</Description>
-            <Name>iFarmacoI</Name>
-            <Properties />
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <ID>6</ID>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <CursorImage>0</CursorImage>
-            <Image>0</Image>
-            <Description xml:space="preserve">Clave FARMACO</Description>
-            <Name>iFARMACO</Name>
             <Properties />
             <Interactions>
               <Event Index="0" />
@@ -2409,7 +2355,7 @@
             <IdleView>0</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>2</StartingRoom>
             <StartX>200</StartX>
             <StartY>160</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -2432,49 +2378,9 @@
             <Interactions>
               <Event Index="0" />
               <Event Index="1" />
-              <Event Index="2">cCientifico1_Talk</Event>
-              <Event Index="3">cCientifico1_UseInv</Event>
-              <Event Index="4" />
-              <Event Index="5" />
-              <Event Index="6" />
-              <Event Index="7" />
-            </Interactions>
-          </Character>
-          <Character>
-            <ID>2</ID>
-            <ScriptName>cCientifico2</ScriptName>
-            <RealName xml:space="preserve">Cientifico 2</RealName>
-            <NormalView>2</NormalView>
-            <SpeechView>0</SpeechView>
-            <IdleView>0</IdleView>
-            <ThinkingView>0</ThinkingView>
-            <BlinkingView>0</BlinkingView>
-            <StartingRoom>2</StartingRoom>
-            <StartX>200</StartX>
-            <StartY>150</StartY>
-            <UniformMovementSpeed>True</UniformMovementSpeed>
-            <MovementSpeed>3</MovementSpeed>
-            <MovementSpeedX>0</MovementSpeedX>
-            <MovementSpeedY>0</MovementSpeedY>
-            <AnimationDelay>4</AnimationDelay>
-            <SpeechAnimationDelay>5</SpeechAnimationDelay>
-            <SpeechColor>65535</SpeechColor>
-            <Solid>True</Solid>
-            <Clickable>True</Clickable>
-            <UseRoomAreaScaling>True</UseRoomAreaScaling>
-            <UseRoomAreaLighting>True</UseRoomAreaLighting>
-            <TurnBeforeWalking>True</TurnBeforeWalking>
-            <DiagonalLoops>True</DiagonalLoops>
-            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
-            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
-            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
-            <Properties />
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
-              <Event Index="4" />
+              <Event Index="4">cCientifico1_AnyClick</Event>
               <Event Index="5" />
               <Event Index="6" />
               <Event Index="7" />
@@ -2602,191 +2508,6 @@ goto-previous]]></Script>
                 <ID>3</ID>
                 <Text xml:space="preserve">Cuentame menos</Text>
                 <Show>True</Show>
-                <Say>True</Say>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>2</ID>
-            <Name>dDialog2</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-return
-@1
-Cientifico1: Eso pregunto yo.
-Robot: Soy AAS 3.14. En mi planeta ha aparecido por primera vez un virus. Vengo a aprender como tratarlo.
-Cientifico1: Anda, pues en eso mismo trabajo yo.
-return
-@2
-Cientifico1: Yo hago investigacion aplicada, no basica
-Robot:  Y que es eso? 
-Cientifico1: Pues la investigacion aplicada es la que se encarga 
-Cientifico1: de aplicar los conocimientos adquiridos en la investigacion basica o teorica.
-Robot: Ah! Pero entonces la basica no sirve para nada no?
-Cientifico1: Al reves!! Sin la investigacion basica no podriamos tener la aplicada!
-Robot: Ahhhhh ya entiendo! Yo tambien quiero hacer investigacion basica.
-Cientifico1: Para ello tienes que encontrar las moleculas!!!! Vete a buscarlas.
-return
-
-@3
-Cientifico1: Estas son las molecula que estoy investigando. 
-Robot: Y para que sirven?
-Cientifico1: Sirven para el virus DDV1.
-Robot: Oh! Y que hace ese virus?
-Cientifico1: Mata algunas neuronas y provoca que las personas vean doble, 
-Cientifico1: no diferencien olores (no reconocen el dulce!) y no escuchan los sonidos graves. 
-Cientifico1: Para curarlo, llevo 5 anos estudiando la familia de los farmacos F12
-Robot: Ala tanto tiempo, que lento eres!
-Cientifico1: La investigacion lleva muchos anos! 
-Cientifico1: Primero tuve que descubrir que hacia en el cuerpo, y despues probar mas de 200 moleculas! 
-Cientifico1: A dia de hoy he conseguido tener 5 farmacos muy prometedores! Son las moleculas…
-Cientifico1: …
-Cientifico1: …
-Cientifico1: Oh no! Me he olvidado de cuáles eran! Bua, pero tengo que terminar este experimento antes de la reunion
-Cientifico1: Puedes ayudarme a encontrarlas?
-Robot: Claro!
-Cientifico1: Lo apunte en un papel, tiene que estar en algun sitio del laboratorio. 
-Cientifico1: Toma estas llaves, sirven para abrir uno de los armarios. Quizas lo deje en la campana… Quien sabe!
-  cRobot.AddInventory(iKey);
-  aGet_object.Play(eAudioPriorityHigh);
-  Display("Has obtenido una llave.");
-Robot: Que cientifico mas despistado…
-
-stop
-]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Text xml:space="preserve">Quien eres tu?</Text>
-                <Show>True</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Text xml:space="preserve">Qua estas haciendo en el laboratorio?</Text>
-                <Show>True</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Text xml:space="preserve">Oh y que es esto??</Text>
-                <Show>True</Show>
-                <Say>True</Say>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>3</ID>
-            <Name>dDialog3</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-Cientifico1: Que es la investigacion basica?
-return
-@1
-Cientifico1: Correcto!
-option-off-forever 1
-option-off-forever 2
-option-off-forever 3
-option-on 4
-option-on 5
-option-on 6
-Cientifico1: Que es la investigacion aplicada?
-return
-@2
-Cientifico1: Claro que sirve!
-return
-@3
-Cientifico1: Todavia no!
-return
-@4
-Cientifico1: No! La basica es la base de la aplicada
-return
-@5
-Cientifico1: Claro que sirve!
-return
-@6
-Cientifico1: Correcto!
-option-off-forever 4
-option-off-forever 5
-option-off-forever 6
-option-on 7
-option-on 8
-option-on 9
-Cientifico1: Y que vamos a hacer ahora con las moleculas?
-return
-@7
-Cientifico1: Muy bien! Veo que vas aprendiendo!
-Cientifico1: Toma, la clave es FARMACO
-  cRobot.AddInventory(iFARMACO);
-  aGet_object.Play(eAudioPriorityHigh);
-  Display("Has obtenido una clave, dice FARMACO.");
-option-off-forever 4
-option-off-forever 7
-option-off-forever 8
-option-off-forever 9
-stop
-@8
-Cientifico1: No, esa viene despues.
-return
-@9
-Cientifico1: Esa sera la ultima fase.
-return
-]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Text xml:space="preserve">La base de la investigacion aplicada</Text>
-                <Show>True</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Text xml:space="preserve">No sirve para nada</Text>
-                <Show>True</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Text xml:space="preserve">Se aplica a una enfermedad</Text>
-                <Show>True</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>4</ID>
-                <Text xml:space="preserve">La base de la investigacion basica</Text>
-                <Show>False</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>5</ID>
-                <Text xml:space="preserve">No sirve para nada</Text>
-                <Show>False</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>6</ID>
-                <Text xml:space="preserve">Se aplica a una enfermedad</Text>
-                <Show>False</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>7</ID>
-                <Text xml:space="preserve">Fase perclinica</Text>
-                <Show>False</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>8</ID>
-                <Text xml:space="preserve">Fase clinica</Text>
-                <Show>False</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>9</ID>
-                <Text>Farmacovigilancia</Text>
-                <Show>False</Show>
                 <Say>True</Say>
               </DialogOption>
             </DialogOptions>
