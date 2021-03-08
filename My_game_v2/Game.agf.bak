@@ -2141,7 +2141,7 @@
             <HotspotY>0</HotspotY>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
-            <Image>0</Image>
+            <Image>10</Image>
             <Description xml:space="preserve">Lista de moleculas</Description>
             <Name>iLista</Name>
             <Properties />
@@ -2159,7 +2159,7 @@
             <HotspotY>0</HotspotY>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
-            <Image>0</Image>
+            <Image>9</Image>
             <Description xml:space="preserve">Farmaco I</Description>
             <Name>iFarmacoI</Name>
             <Properties />
@@ -2180,6 +2180,24 @@
             <Image>0</Image>
             <Description xml:space="preserve">Clave FARMACO</Description>
             <Name>iFARMACO</Name>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <ID>7</ID>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <CursorImage>0</CursorImage>
+            <Image>9</Image>
+            <Description xml:space="preserve">Farmaco para la fase II</Description>
+            <Name>iFarmaco2</Name>
             <Properties />
             <Interactions>
               <Event Index="0" />
@@ -2450,7 +2468,7 @@
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
             <StartingRoom>2</StartingRoom>
-            <StartX>200</StartX>
+            <StartX>100</StartX>
             <StartY>150</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>3</MovementSpeed>
@@ -2472,8 +2490,48 @@
             <Interactions>
               <Event Index="0" />
               <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
+              <Event Index="2">cCientifico2_Talk</Event>
+              <Event Index="3">cCientifico2_UseInv</Event>
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <ID>3</ID>
+            <ScriptName>cCientifico3</ScriptName>
+            <RealName>Cientifico3</RealName>
+            <NormalView>2</NormalView>
+            <SpeechView>0</SpeechView>
+            <IdleView>0</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>0</BlinkingView>
+            <StartingRoom>2</StartingRoom>
+            <StartX>185</StartX>
+            <StartY>155</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>4</AnimationDelay>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>65535</SpeechColor>
+            <Solid>True</Solid>
+            <Clickable>True</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>True</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2">cCientifico3_Talk</Event>
+              <Event Index="3">cCientifico3_UseInv</Event>
               <Event Index="4" />
               <Event Index="5" />
               <Event Index="6" />
@@ -2640,18 +2698,18 @@ Cientifico1: Para curarlo, llevo 5 anos estudiando la familia de los farmacos F1
 Robot: Ala tanto tiempo, que lento eres!
 Cientifico1: La investigacion lleva muchos anos! 
 Cientifico1: Primero tuve que descubrir que hacia en el cuerpo, y despues probar mas de 200 moleculas! 
-Cientifico1: A dia de hoy he conseguido tener 5 farmacos muy prometedores! Son las moleculas…
-Cientifico1: …
-Cientifico1: …
+Cientifico1: A dia de hoy he conseguido tener 5 farmacos muy prometedores! Son las moleculas...
+Cientifico1: ...
+Cientifico1: ...
 Cientifico1: Oh no! Me he olvidado de cuáles eran! Bua, pero tengo que terminar este experimento antes de la reunion
 Cientifico1: Puedes ayudarme a encontrarlas?
 Robot: Claro!
 Cientifico1: Lo apunte en un papel, tiene que estar en algun sitio del laboratorio. 
-Cientifico1: Toma estas llaves, sirven para abrir uno de los armarios. Quizas lo deje en la campana… Quien sabe!
+Cientifico1: Toma estas llaves, sirven para abrir uno de los armarios. Quizas lo deje en la campana... Quien sabe!
   cRobot.AddInventory(iKey);
   aGet_object.Play(eAudioPriorityHigh);
   Display("Has obtenido una llave.");
-Robot: Que cientifico mas despistado…
+Robot: Que cientifico mas despistado...
 
 stop
 ]]></Script>
@@ -2785,6 +2843,149 @@ return
               </DialogOption>
               <DialogOption>
                 <ID>9</ID>
+                <Text>Farmacovigilancia</Text>
+                <Show>False</Show>
+                <Say>True</Say>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>4</ID>
+            <Name>dDialog4</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+Cientifico2: Hola, que quieres? 
+Robot: Hola! Vengo a traerte estos farmacos
+Cientifico2: Ai gracias! Es justo lo que necesito para empezar esta fase, la fase preclinica.
+Robot: Y que es eso?
+Cientifico2: Es la fase donde probamos los farmacos que has traido en celulas, tejidos o in vivo.
+Cientifico2: Aqui lo hacemos en neuronas y vemos cual es el mejor, el mas eficaz.
+Robot: Ahhhh y como se hace eso?
+Cientifico2:  Para saberlo tienes que encontrar las neuronas.
+stop
+]]></Script>
+            <DialogOptions />
+          </Dialog>
+          <Dialog>
+            <ID>5</ID>
+            <Name>dDialog5</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+Cientifico2: Oh! Has encontrado las neuronas!!! Ahora ya podemos hacer los experimentos.
+Cientifico2: ...
+Cientifico2: ...
+Robot: Genial! Ya sabemos cual es el mas eficaz?
+Cientifico2: Han pasado 3 segundos. Necesitan mas tiempo!
+  Display("3 minutos despues");
+Robot: Y ahora?
+Cientifico2: Aun no
+  Display("3 horas mas tarde");
+Cientifico2: Eres muy impaciente!
+  Display("3 meses mas tarde");
+Cientifico2: Ahora si! Observa las placas.
+Cientifico2: El farmaco mas eficaz es el que ha evitado la muerte de las neuronas. 
+Cientifico2: Traeme la placa.
+Cientifico2: SI!!  el F124.
+Robot: Y ahora que se hace con eso, ya se lo podemos dar a humanos?
+Cientifico2: No!!!! Aun no sabemos si es seguro. 
+Cientifico2: Ahora necesitamos analizar la seguridad, para ello lleva este farmaco a mi companero.
+  cRobot.AddInventory(iFarmaco2);
+  aGet_object.Play(eAudioPriorityHigh);
+  Display("Has obtenido unos farmacos para la fase II.");
+stop]]></Script>
+            <DialogOptions />
+          </Dialog>
+          <Dialog>
+            <ID>6</ID>
+            <Name>dDialog6</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+
+Cientifico3: Oh!! Me traes el farmaco mas eficaz, genial!!!! Vamos a testarlo
+Robot: Como???
+Cientifico3: Para ello tenemos que testearlo en diferentes lineas celulares y en animales vivos como ratones.
+Robot: Ohhhh genial, y ahora que ya sabemos que es seguro, podemos darselo a humanos?
+Cientifico3: Si!! Pero... para poder pasar a la siguiente fase, probarlo en humanos, 
+Cientifico3: necesito comprobar que has aprendido lo que hemos hecho en esta fase.
+Cientifico3: En la fase preclínica se investiga en:
+return
+
+
+
+
+
+
+
+
+
+@1
+Cientifico3: No! Todavia no! No es seguro.
+return
+@2
+Cientifico3: Muy bien!
+option-off-forever 1
+option-off-forever 2
+option-off-forever 3
+option-on 4
+option-on 5
+option-on 6
+Cientifico3: La siguiente fase es:
+return
+@3
+Cientifico3: Tenemos que investigar sobre algo vivo.
+return
+@4
+Cientifico3: En esa estamos ahora! Aish... robotito...
+Robot: Que soy un alien!
+Cientifico3: Aish, perdon!
+return
+@5
+Cientifico3: Correcto!
+Cientifico3: Ya puedes pasar a la siguiente fase!
+option-off-forever 4
+option-off-forever 5
+option-off-forever 6
+stop
+@6
+Cientifico3: No! Esa sera la ultima fase!
+return
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Text>Humanos</Text>
+                <Show>True</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Text xml:space="preserve">Celulas, tejidos, in vivo</Text>
+                <Show>True</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Text xml:space="preserve">Nada vivo</Text>
+                <Show>True</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Text xml:space="preserve">Fase clinica</Text>
+                <Show>False</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Text>Descubrimiento</Text>
+                <Show>False</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
                 <Text>Farmacovigilancia</Text>
                 <Show>False</Show>
                 <Say>True</Say>
@@ -4957,6 +5158,41 @@ return
               </Sprite>
             </Sprites>
           </SpriteFolder>
+          <SpriteFolder Name="Objetos">
+            <SubFolders />
+            <Sprites>
+              <Sprite Slot="9" Width="10" Height="10" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Sprites/farmacoi.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>10</ImportHeight>
+                  <ImportWidth>10</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="10" Width="10" Height="10" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Sprites/lista.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>10</ImportHeight>
+                  <ImportWidth>10</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+            </Sprites>
+          </SpriteFolder>
         </SubFolders>
         <Sprites>
           <Sprite Slot="0" Width="10" Height="6" ColorDepth="32" Resolution="Real" AlphaChannel="False">
@@ -5309,7 +5545,15 @@ See KeyboardMovement.txt for details.
   <Component Name="Rooms" />
   <Component Name="Translations" />
   <Component Name="MusicAndSpeech">
-    <SpeechVoxFiles />
+    <SpeechVoxFiles>
+      <File Name="speech\cien1.wav" FileTime="2021-02-26 11:06:32Z" />
+      <File Name="speech\robo1.wav" FileTime="2021-02-25 20:33:52Z" />
+      <File Name="speech\robo2.wav" FileTime="2021-02-25 20:38:54Z" />
+      <File Name="speech\robo3.wav" FileTime="2021-02-25 20:45:15Z" />
+      <File Name="speech\robo4.wav" FileTime="2021-02-25 20:49:05Z" />
+      <File Name="speech\robo5.wav" FileTime="2021-02-26 11:10:01Z" />
+      <File Name="speech\robo6.wav" FileTime="2021-02-26 10:58:48Z" />
+    </SpeechVoxFiles>
     <PamFiles />
   </Component>
   <Component Name="SourceControl">
