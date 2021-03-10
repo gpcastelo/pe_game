@@ -644,11 +644,11 @@
         <UnloadedRooms>
           <UnloadedRoom>
             <Number>1</Number>
-            <Description IsNull="True" />
+            <Description xml:space="preserve">Lab 1</Description>
           </UnloadedRoom>
           <UnloadedRoom>
             <Number>2</Number>
-            <Description IsNull="True" />
+            <Description xml:space="preserve">Lab 2</Description>
           </UnloadedRoom>
           <UnloadedRoom>
             <Number>3</Number>
@@ -656,7 +656,19 @@
           </UnloadedRoom>
           <UnloadedRoom>
             <Number>4</Number>
-            <Description IsNull="True" />
+            <Description xml:space="preserve">Sala pacientes</Description>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Number>5</Number>
+            <Description xml:space="preserve">Comite etico</Description>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Number>6</Number>
+            <Description>Farmacia</Description>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Number>7</Number>
+            <Description>Conclusion</Description>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -903,54 +915,6 @@
                 <Visible>True</Visible>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnIconSave_Click</OnClick>
-                <ClickAction>RunScript</ClickAction>
-                <NewModeNumber>0</NewModeNumber>
-                <ClipImage>False</ClipImage>
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <Font>0</Font>
-                <PushedImage>2130</PushedImage>
-                <MouseoverImage>2129</MouseoverImage>
-                <Image>2128</Image>
-                <Text />
-                <Height>27</Height>
-                <Locked>False</Locked>
-                <Width>32</Width>
-                <Left>193</Left>
-                <Top>1</Top>
-                <ZOrder>6</ZOrder>
-                <ID>6</ID>
-                <Name>btnIconSave</Name>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Visible>True</Visible>
-              </GUIButton>
-              <GUIButton>
-                <OnClick>btnIconLoad_Click</OnClick>
-                <ClickAction>RunScript</ClickAction>
-                <NewModeNumber>0</NewModeNumber>
-                <ClipImage>False</ClipImage>
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <Font>0</Font>
-                <PushedImage>2134</PushedImage>
-                <MouseoverImage>2133</MouseoverImage>
-                <Image>2132</Image>
-                <Text />
-                <Height>27</Height>
-                <Locked>False</Locked>
-                <Width>32</Width>
-                <Left>225</Left>
-                <Top>1</Top>
-                <ZOrder>7</ZOrder>
-                <ID>7</ID>
-                <Name>btnIconLoad</Name>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Visible>True</Visible>
-              </GUIButton>
-              <GUIButton>
                 <OnClick>btnIconExit_Click</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
@@ -967,33 +931,9 @@
                 <Width>32</Width>
                 <Left>289</Left>
                 <Top>1</Top>
-                <ZOrder>8</ZOrder>
-                <ID>8</ID>
+                <ZOrder>6</ZOrder>
+                <ID>6</ID>
                 <Name>btnIconExit</Name>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Visible>True</Visible>
-              </GUIButton>
-              <GUIButton>
-                <OnClick>btnIconAbout_Click</OnClick>
-                <ClickAction>RunScript</ClickAction>
-                <NewModeNumber>0</NewModeNumber>
-                <ClipImage>False</ClipImage>
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <Font>0</Font>
-                <PushedImage>2138</PushedImage>
-                <MouseoverImage>2137</MouseoverImage>
-                <Image>2136</Image>
-                <Text />
-                <Height>27</Height>
-                <Locked>False</Locked>
-                <Width>32</Width>
-                <Left>257</Left>
-                <Top>1</Top>
-                <ZOrder>9</ZOrder>
-                <ID>9</ID>
-                <Name>btnIconAbout</Name>
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Visible>True</Visible>
@@ -1095,7 +1035,7 @@
                 <PushedImage>2161</PushedImage>
                 <MouseoverImage>0</MouseoverImage>
                 <Image>2160</Image>
-                <Text>Close</Text>
+                <Text>Cerrar</Text>
                 <Height>19</Height>
                 <Locked>False</Locked>
                 <Width>71</Width>
@@ -1189,7 +1129,7 @@
                 <PushedImage>2161</PushedImage>
                 <MouseoverImage>0</MouseoverImage>
                 <Image>2160</Image>
-                <Text>Resume</Text>
+                <Text>Seguir</Text>
                 <Height>19</Height>
                 <Locked>True</Locked>
                 <Width>71</Width>
@@ -1213,7 +1153,7 @@
                 <PushedImage>2161</PushedImage>
                 <MouseoverImage>0</MouseoverImage>
                 <Image>2160</Image>
-                <Text>Save</Text>
+                <Text>Guardar</Text>
                 <Height>19</Height>
                 <Locked>True</Locked>
                 <Width>71</Width>
@@ -1261,7 +1201,7 @@
                 <PushedImage>2161</PushedImage>
                 <MouseoverImage>0</MouseoverImage>
                 <Image>2160</Image>
-                <Text>Quit</Text>
+                <Text>Salir</Text>
                 <Height>19</Height>
                 <Locked>True</Locked>
                 <Width>71</Width>
@@ -1369,7 +1309,7 @@
                 <PushedImage>2161</PushedImage>
                 <MouseoverImage>0</MouseoverImage>
                 <Image>2160</Image>
-                <Text>Load</Text>
+                <Text>Cargar</Text>
                 <Height>19</Height>
                 <Locked>True</Locked>
                 <Width>71</Width>
@@ -1505,7 +1445,7 @@
                 <PushedImage>2161</PushedImage>
                 <MouseoverImage>0</MouseoverImage>
                 <Image>2160</Image>
-                <Text>Restart</Text>
+                <Text>Reiniciar</Text>
                 <Height>19</Height>
                 <Locked>True</Locked>
                 <Width>71</Width>
@@ -1544,7 +1484,7 @@
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>19248</TextColor>
                 <Font>0</Font>
-                <Text xml:space="preserve">Are you sure you want to restart?</Text>
+                <Text xml:space="preserve">Seguro que quieres reiniciar?</Text>
                 <Height>23</Height>
                 <Locked>False</Locked>
                 <Width>150</Width>
@@ -1568,7 +1508,7 @@
                 <PushedImage>2161</PushedImage>
                 <MouseoverImage>0</MouseoverImage>
                 <Image>2160</Image>
-                <Text>Yes</Text>
+                <Text>Si</Text>
                 <Height>19</Height>
                 <Locked>False</Locked>
                 <Width>71</Width>
@@ -2022,7 +1962,7 @@
                 <PushedImage>2161</PushedImage>
                 <MouseoverImage>0</MouseoverImage>
                 <Image>2160</Image>
-                <Text>Quit</Text>
+                <Text>Salir</Text>
                 <Height>19</Height>
                 <Locked>True</Locked>
                 <Width>71</Width>
@@ -2046,7 +1986,7 @@
                 <PushedImage>2161</PushedImage>
                 <MouseoverImage>0</MouseoverImage>
                 <Image>2160</Image>
-                <Text>Play</Text>
+                <Text>Jugar</Text>
                 <Height>19</Height>
                 <Locked>False</Locked>
                 <Width>71</Width>
@@ -2063,7 +2003,7 @@
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>19248</TextColor>
                 <Font>0</Font>
-                <Text xml:space="preserve">Are you sure you want to quit?</Text>
+                <Text xml:space="preserve">Seguro que quieres dejar de jugar?</Text>
                 <Height>23</Height>
                 <Locked>True</Locked>
                 <Width>150</Width>
@@ -2220,6 +2160,24 @@
             <Image>9</Image>
             <Description xml:space="preserve">Farmaco fase III</Description>
             <Name>iFarmaco3</Name>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <ID>9</ID>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <CursorImage>0</CursorImage>
+            <Image>10</Image>
+            <Description xml:space="preserve">Receta para la farmacovigilancia</Description>
+            <Name>iReceta</Name>
             <Properties />
             <Interactions>
               <Event Index="0" />
@@ -2635,6 +2593,126 @@
               <Event Index="2">cPaciente1_Talk</Event>
               <Event Index="3" />
               <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <ID>6</ID>
+            <ScriptName>cCientifico4</ScriptName>
+            <RealName xml:space="preserve">Cientifico 4 aprobacion y registro</RealName>
+            <NormalView>2</NormalView>
+            <SpeechView>0</SpeechView>
+            <IdleView>0</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>0</BlinkingView>
+            <StartingRoom>5</StartingRoom>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>4</AnimationDelay>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>65535</SpeechColor>
+            <Solid>True</Solid>
+            <Clickable>True</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>True</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4">cCientifico4_AnyClick</Event>
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <ID>7</ID>
+            <ScriptName>cFarmaceutico</ScriptName>
+            <RealName>Farmaceutico</RealName>
+            <NormalView>2</NormalView>
+            <SpeechView>0</SpeechView>
+            <IdleView>0</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>0</BlinkingView>
+            <StartingRoom>6</StartingRoom>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>4</AnimationDelay>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>65535</SpeechColor>
+            <Solid>True</Solid>
+            <Clickable>True</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>True</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2">cFarmaceutico_Talk</Event>
+              <Event Index="3">cFarmaceutico_UseInv</Event>
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <ID>8</ID>
+            <ScriptName>cCliente</ScriptName>
+            <RealName xml:space="preserve">Cliente farmacia</RealName>
+            <NormalView>2</NormalView>
+            <SpeechView>0</SpeechView>
+            <IdleView>0</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>0</BlinkingView>
+            <StartingRoom>6</StartingRoom>
+            <StartX>280</StartX>
+            <StartY>120</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>4</AnimationDelay>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>65535</SpeechColor>
+            <Solid>True</Solid>
+            <Clickable>True</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>True</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4">cCliente_AnyClick</Event>
               <Event Index="5" />
               <Event Index="6" />
               <Event Index="7" />
@@ -3134,6 +3212,293 @@ Paciente1: Hasta luego!
 stop
 ]]></Script>
             <DialogOptions />
+          </Dialog>
+          <Dialog>
+            <ID>9</ID>
+            <Name>dDialog9</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+Medico1: Ahora se evaluara la seguridad y eficacia del farmaco en humanos, 
+Medico1: tanto como actua en el cuerpo humano, como las posibles reacciones adversas que generen. 
+Medico1: A continuacion, los resultados son evaluados y se pasa a la fase de aprobacion y registro. 
+Medico1: Antes de pasar a esa fase, podrias decirme...
+Medico1: Los ensayos clinicos a que fase pertenecen?
+return
+@1
+Medico1: Muy bien!
+option-off-forever 1
+option-off-forever 2
+option-off-forever 3
+option-on 4
+option-on 5
+option-on 6
+Medico1: Antes de ser testados en humanos, el farmaco...
+return
+@2
+Medico1: Esa fase ya la hemos pasado!
+return
+@3
+Medico1: Todavia no, esa es la siguiente fase!
+return
+@4
+Medico1: Correcto!
+Medico1: Ya puedes pasar a la siguiente fase! Te acuerdas cual era?
+Robot: Hmm... Aprobacion y registro, no?
+Medico1: Como sabe este robot!
+Robot: QUE SOY UN ALIEN!
+Medico1: Y tus tentaculos?
+Robot: Aish, en fin...
+stop
+@5
+Medico1: Si que la necesita!
+return
+@6
+Medico1: Si que la requiere! Es muy importante!
+return
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Text xml:space="preserve">Fase clinica</Text>
+                <Show>True</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Text xml:space="preserve">Fase preclinica</Text>
+                <Show>True</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Text xml:space="preserve">Fase de aprobacion y registro</Text>
+                <Show>True</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Text xml:space="preserve">Pasa la aprobacion de la AEMPS y es supervisado por comites eticos</Text>
+                <Show>False</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Text xml:space="preserve">No necesita aprobacion</Text>
+                <Show>False</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Text xml:space="preserve">No requiere de la supervision por parte de comites eticos</Text>
+                <Show>False</Show>
+                <Say>True</Say>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>10</ID>
+            <Name>dDialog10</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+Cientifico4: Hola, en que te puedo ayudar?
+Robot: Hola, quien eres tu?
+Cientifico4: Yo soy del comite de expertos de la Agencia Europea del Medicamento (EMA)
+Robot: Eing?
+Cientifico4: Evaluamos la informacion del farmaco o vacuna y tomamos una decision al respecto.
+Robot: Y con que criterio tomais la decision?
+Cientifico4: Siempre nos basamos en Beneficios vs Riesgos
+Robot:  Asi que teneis la decision final
+Cientifico4: No exactamente. Solo hacemos una recomendacion, la Comision Europea es la que toma la decision final.
+Robot: Entiendo.
+Cientifico4: Anda, me haces un favor? No se donde deje los documentos del farmaco X...
+
+stop
+]]></Script>
+            <DialogOptions />
+          </Dialog>
+          <Dialog>
+            <ID>11</ID>
+            <Name>dDialog11</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+Robot: "Fases clinica, prospecto, auditoria, plan de gestion de riesgos ..."
+Cientifico4: Ah, los documentos que andaba buscando!
+Cientifico4: Este farmaco ya fue aprobado la semana pasada. Ya ha llegado a las farmacias
+Robot: Farmacia??? Que es eso?
+Cientifico4: Es la tienda donde se venden farmacos a la poblacion. 
+Cientifico4: Me harias unos recados? Necesito unos medicamentos de la farmacia. 
+  cRobot.AddInventory(iReceta);
+  aGet_object.Play(eAudioPriorityHigh);
+  Display("Has obtenido una receta farmaceutica.");
+stop
+]]></Script>
+            <DialogOptions />
+          </Dialog>
+          <Dialog>
+            <ID>12</ID>
+            <Name>dDialog12</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+Robot: Hola!! Vienes a la farmacia a por un medicamento?
+Cliente: Hola!! Sii, vengo a por el F124 porque tengo el virus DDV1
+Robot: Oh!!! Y es la primera vez que lo vas a utilizar?
+Cliente: No! Es la tercera, pero estoy teniendo unas reacciones que no aparecen en el prospecto 
+Cliente: y quería hablarlo con el farmacéutico, 
+Cliente: VEO TRIPLE!
+Robot: Oh!! No sabia que podia pasar eso
+stop
+]]></Script>
+            <DialogOptions />
+          </Dialog>
+          <Dialog>
+            <ID>13</ID>
+            <Name>dDialog13</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+Robot: Hola!! Vengo a por el medicamento F124, pero hay algo que me preocupa...
+Robot: Este humano ve triple, pero eso no lo pone en el prospecto, como puede ser?
+Farmaceutico: Como cada persona es un individuo, los farmacos pueden afectar de forma diferente en ellos, 
+Farmaceutico: por eso aunque el farmaco sea seguro y eficaz se le hace un seguimiento durante todo el tiempo que esta comercializado.
+Robot: Ahhhh! Y que hay que hacer en estos casos?
+Farmaceutico: Como ver triple no es una reaccion descrita en el prospecto tenemos que comunicarlo 
+Farmaceutico: desde la farmacia a traves del sistema de notificaciones de reacciones adversas de la AEMPS, 
+Farmaceutico: para que la evaluen y asi puedan tomar una decision.
+Robot: Oh! Osea que podria retirarse del mercado?
+Farmaceutico: Si!! A veces hay reacciones adversas que provocan la retirada del farmaco, 
+Farmaceutico: ya que con que solo le ocurra a una persona ya tienen que estar descritas en el prospecto 
+Farmaceutico: y si deciden que con esa reaccion no se puede seguir administrando, se retira.
+Robot:  Y a quien se le pueden decir estas reacciones adversas??
+Farmaceutico: A tu farmaceutico/a, a tu medico/a. 
+Farmaceutico: O los/as pacientes las pueden notificar a traves de la pagina web de la AEMPS.
+Robot: Madre mia!! Cuanta seguridad!!!!!!! 
+Farmaceutico: La verdad es que si, los farmacos y por lo tanto las vacunas también son muy seguros, 
+Farmaceutico: tienen que pasar muchas fases para poder ser administrados!!!
+stop
+]]></Script>
+            <DialogOptions />
+          </Dialog>
+          <Dialog>
+            <ID>14</ID>
+            <Name>dDialog14</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+  Display("Para finalizar: si tienes una reacción adversa a quien se la debes comunicar?");
+  
+return
+@1
+  Display("Correcto!");
+option-off-forever 1
+option-off-forever 2
+option-off-forever 3
+option-on 4
+option-on 5
+  Display("El farmaco sigue siendo evaluado durante todos los anos de su comercializacion?");
+return
+
+@2
+  Display("No creo que se quieran acercar mucho a alguien con sintomas...");
+return
+
+@3
+  Display("Bueno, si, pero es probable que no sepan que decir al respecto.");
+return
+
+@4
+  Display("Veo que has aprendido mucho :)");
+  Display("Y ahora, sabes de donde vienen los farmacos?");
+  Display("Crees que los farmacos y por lo tanto las vacunas, son seguras?");
+option-off-forever 4
+option-off-forever 5
+option-on 6
+option-on 7
+return
+
+@5
+  Display("Piensalo bien...");
+return
+
+@6
+  Display("Crees que los farmacos y por lo tanto las vacunas, son seguras?");
+option-off-forever 6
+option-off-forever 7
+option-on 8
+option-on 9
+return
+
+@7
+  Display("Crees que los farmacos y por lo tanto las vacunas, son seguras?");
+option-off-forever 6
+option-off-forever 7
+option-on 8
+option-on 9
+return
+@8
+stop
+@9
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Text xml:space="preserve">Farmaceutico, medico, pagina web de la AEMPS</Text>
+                <Show>True</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Text>Vecinos</Text>
+                <Show>True</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Text>Familia</Text>
+                <Show>True</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Text>Si</Text>
+                <Show>False</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Text>No</Text>
+                <Show>False</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Text>Si</Text>
+                <Show>False</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Text>No</Text>
+                <Show>False</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>8</ID>
+                <Text>Si</Text>
+                <Show>False</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>9</ID>
+                <Text>No</Text>
+                <Show>False</Show>
+                <Say>True</Say>
+              </DialogOption>
+            </DialogOptions>
           </Dialog>
         </Dialogs>
       </DialogFolder>
