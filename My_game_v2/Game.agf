@@ -2956,10 +2956,14 @@ Cientifico1: Y que vamos a hacer ahora con las moleculas?
 return
 @7
 Cientifico1: Muy bien! Veo que vas aprendiendo!
-Cientifico1: Toma, la clave es FARMACO
-  cRobot.AddInventory(iFARMACO);
-  aGet_object.Play(eAudioPriorityHigh);
-  Display("Has obtenido una clave, dice FARMACO.");
+Cientifico1: Ya puedes pasar a la siguiente fase!
+Cientifico1: Solo tienes que caminar hasta el extremo derecho del lab.
+Cientifico1: Y pasarás a otra sala!
+Robot: Anda, parece magia!
+
+//cRobot.AddInventory(iFARMACO);
+//aGet_object.Play(eAudioPriorityHigh);
+//Display("Has obtenido una clave, dice FARMACO.");
 option-off-forever 4
 option-off-forever 7
 option-off-forever 8
@@ -3391,6 +3395,7 @@ stop
   Display("Para finalizar: si tienes una reacción adversa a quien se la debes comunicar?");
   
 return
+// Farmaceutico, medico, pagina web AEMPS:
 @1
   Display("Correcto!");
 option-off-forever 1
@@ -3400,29 +3405,31 @@ option-on 4
 option-on 5
   Display("El farmaco sigue siendo evaluado durante todos los anos de su comercializacion?");
 return
-
+// Familia:
 @2
   Display("No creo que se quieran acercar mucho a alguien con sintomas...");
 return
-
+// Vecinos
 @3
   Display("Bueno, si, pero es probable que no sepan que decir al respecto.");
 return
-
+// P: El farmaco sigue siendo evaluado durante todos los anos de su comercializacion?
+// Si
 @4
   Display("Veo que has aprendido mucho :)");
   Display("Y ahora, sabes de donde vienen los farmacos?");
-  Display("Crees que los farmacos y por lo tanto las vacunas, son seguras?");
 option-off-forever 4
 option-off-forever 5
 option-on 6
 option-on 7
 return
-
-@5
+//No
+@5 
   Display("Piensalo bien...");
 return
 
+// P: Y ahora, sabes de donde vienen los farmacos?
+// Si
 @6
   Display("Crees que los farmacos y por lo tanto las vacunas, son seguras?");
 option-off-forever 6
@@ -3430,7 +3437,7 @@ option-off-forever 7
 option-on 8
 option-on 9
 return
-
+// No
 @7
   Display("Crees que los farmacos y por lo tanto las vacunas, son seguras?");
 option-off-forever 6
@@ -3438,9 +3445,15 @@ option-off-forever 7
 option-on 8
 option-on 9
 return
+// P: Crees que los farmacos y por lo tanto las vacunas, son seguras?
+// Si
 @8
+  Display("Sea cual sea tu respuesta, esperamos que te haya gustado el juego y hayas aprendido mucho");
+  EXITGAME;
 stop
 @9
+  Display("Sea cual sea tu respuesta, esperamos que te haya gustado el juego y hayas aprendido mucho");
+  EXITGAME;
 stop
 ]]></Script>
             <DialogOptions>
