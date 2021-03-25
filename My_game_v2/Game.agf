@@ -3,8 +3,8 @@
 <AGSEditorDocument Version="3.0.3.2" VersionIndex="26" EditorVersion="3.5.0.29">
   <Game>
     <Settings>
-      <GameFileName>My_game_v2</GameFileName>
-      <GameName xml:space="preserve">My game v2</GameName>
+      <GameFileName>Farmacos_juego</GameFileName>
+      <GameName xml:space="preserve">De donde vienen los farmacos</GameName>
       <UniqueID>5707375</UniqueID>
       <GUIDAsString>{31d47ad7-799e-4824-8c32-efaa9b699457}</GUIDAsString>
       <ColorDepth>TrueColor</ColorDepth>
@@ -19,7 +19,7 @@
       <TurnBeforeWalking>True</TurnBeforeWalking>
       <ScaleMovementSpeedWithMaskResolution>False</ScaleMovementSpeedWithMaskResolution>
       <SplitResources>0</SplitResources>
-      <LetterboxMode>False</LetterboxMode>
+      <LetterboxMode>True</LetterboxMode>
       <AutoMoveInWalkMode>True</AutoMoveInWalkMode>
       <PixelPerfect>True</PixelPerfect>
       <WhenInterfaceDisabled>GreyOut</WhenInterfaceDisabled>
@@ -76,7 +76,7 @@
       <DeveloperURL />
       <EnhancedSaveGames>False</EnhancedSaveGames>
       <SaveGameFileExtension />
-      <SaveGameFolderName xml:space="preserve">My game v2</SaveGameFolderName>
+      <SaveGameFolderName xml:space="preserve">De donde vienen los farmacos</SaveGameFolderName>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
       <AudioIndexer>5</AudioIndexer>
       <BuildTargets>Windows</BuildTargets>
@@ -2448,8 +2448,8 @@
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
             <StartingRoom>2</StartingRoom>
-            <StartX>100</StartX>
-            <StartY>150</StartY>
+            <StartX>130</StartX>
+            <StartY>160</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>3</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
@@ -2488,8 +2488,8 @@
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
             <StartingRoom>2</StartingRoom>
-            <StartX>185</StartX>
-            <StartY>155</StartY>
+            <StartX>265</StartX>
+            <StartY>160</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>3</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
@@ -2521,15 +2521,15 @@
           <Character>
             <ID>4</ID>
             <ScriptName>cMedico1</ScriptName>
-            <RealName xml:space="preserve">New character</RealName>
+            <RealName>Medico</RealName>
             <NormalView>2</NormalView>
             <SpeechView>0</SpeechView>
             <IdleView>0</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
             <StartingRoom>4</StartingRoom>
-            <StartX>140</StartX>
-            <StartY>160</StartY>
+            <StartX>95</StartX>
+            <StartY>140</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>3</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
@@ -2569,7 +2569,7 @@
             <BlinkingView>0</BlinkingView>
             <StartingRoom>4</StartingRoom>
             <StartX>200</StartX>
-            <StartY>120</StartY>
+            <StartY>160</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>3</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
@@ -2608,8 +2608,8 @@
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
             <StartingRoom>5</StartingRoom>
-            <StartX>160</StartX>
-            <StartY>120</StartY>
+            <StartX>260</StartX>
+            <StartY>170</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>3</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
