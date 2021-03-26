@@ -2370,8 +2370,8 @@
             <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
             <Properties />
             <Interactions>
-              <Event Index="0">cEgo_Look</Event>
-              <Event Index="1">cEgo_Interact</Event>
+              <Event Index="0" />
+              <Event Index="1" />
               <Event Index="2">cEgo_Talk</Event>
               <Event Index="3" />
               <Event Index="4" />
@@ -2710,124 +2710,6 @@
         <Dialogs>
           <Dialog>
             <ID>0</ID>
-            <Name>dDialog0</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-  dialogCounter = 0;
-return
-@1
-  cRobot.Say("&5 Hola. Tu quien eres?");
-  cCientifico1.Say("&1 Soy unx cientificx muy mal dibujado.");
-  cRobot.Say("&6 Ya decia yo...");
-return
-@2
-Cientifico1: Estoy desarrollando una vacuna.
-Robot: Y como haces eso?
-Cientifico1: Pues consta de varias fases...
-option-off 2
-option-on 3
-return
-@3
-Cientifico1: Que quieres saber?
-Robot: Muchas cosas!
-goto-dialog 1
-@4
-  if (dialogCounter <=1 ){
-    cCientifico1.Say("Nope.");
-    dialogCounter++;
-  }
-  else if (dialogCounter == 2){
-    cCientifico1.Say("Bueno, vale, toma esto.");
-    cRobot.AddInventory(iKey);
-    aGet_object.Play(eAudioPriorityHigh);
-    Display("Has obtenido una llave.");
-    cRobot.Say("Gracias, supongo.");
-    dialogCounter++;
-  }else{
-    cCientifico1.Say("Ya te he dado todo lo que tenia!");
-    cRobot.Say("Tacano...");
-  }
-return
-@5
-Cientifico1: Hasta luego!
-stop
-]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Text xml:space="preserve">Hola. Tu quien eres?</Text>
-                <Show>True</Show>
-                <Say>False</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Text xml:space="preserve">Que estas haciendo aqui?</Text>
-                <Show>True</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Text xml:space="preserve">Cuentame mas!</Text>
-                <Show>True</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>4</ID>
-                <Text xml:space="preserve">Dame algo</Text>
-                <Show>True</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>5</ID>
-                <Text xml:space="preserve">Ya me has contado suficiente</Text>
-                <Show>True</Show>
-                <Say>True</Say>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>1</ID>
-            <Name>dDialog1</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-return
-@1
-Cientifico1: Pues un compuesto para inmunizarte frente a enfermedades viricas
-return
-@2
-Cientifico1: Las vacunas tienen que pasar un proceso de investigacion.
-Cientifico1: Ademas de que deben ser aprobadas...
-Cientifico1: ... por una agencia medica...
-Cientifico1: ... antes de su distribucion.
-return
-@3
-Cientifico1: Lo que tu digas, jefx!
-goto-previous]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Text xml:space="preserve">Que es una vacuna?</Text>
-                <Show>True</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Text xml:space="preserve">Como se que es seguro?</Text>
-                <Show>True</Show>
-                <Say>True</Say>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Text xml:space="preserve">Cuentame menos</Text>
-                <Show>True</Show>
-                <Say>True</Say>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>2</ID>
             <Name>dDialog2</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -2872,7 +2754,10 @@ Cientifico1: Toma estas llaves, sirven para abrir uno de los armarios. Quizas lo
   aGet_object.Play(eAudioPriorityHigh);
   Display("Has obtenido una llave.");
 Robot: Que cientifico mas despistado...
-
+option-off-forever 3
+stop
+@4
+Cientifico1: Hasta luego!
 stop
 ]]></Script>
             <DialogOptions>
@@ -2884,7 +2769,7 @@ stop
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
-                <Text xml:space="preserve">Qua estas haciendo en el laboratorio?</Text>
+                <Text xml:space="preserve">Que estas haciendo en el laboratorio?</Text>
                 <Show>True</Show>
                 <Say>True</Say>
               </DialogOption>
@@ -2894,10 +2779,16 @@ stop
                 <Show>True</Show>
                 <Say>True</Say>
               </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Text xml:space="preserve">Hasta luego!</Text>
+                <Show>True</Show>
+                <Say>True</Say>
+              </DialogOption>
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>3</ID>
+            <ID>1</ID>
             <Name>dDialog3</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -2943,9 +2834,7 @@ Cientifico1: Solo tienes que caminar hasta el extremo derecho del lab.
 Cientifico1: Y pasaras a otra sala!
 Robot: Anda, parece magia!
 
-//cRobot.AddInventory(iFARMACO);
-//aGet_object.Play(eAudioPriorityHigh);
-//Display("Has obtenido una clave, dice FARMACO.");
+
 option-off-forever 4
 option-off-forever 7
 option-off-forever 8
@@ -3016,7 +2905,7 @@ return
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>4</ID>
+            <ID>2</ID>
             <Name>dDialog4</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -3034,7 +2923,7 @@ stop
             <DialogOptions />
           </Dialog>
           <Dialog>
-            <ID>5</ID>
+            <ID>3</ID>
             <Name>dDialog5</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -3064,7 +2953,7 @@ stop]]></Script>
             <DialogOptions />
           </Dialog>
           <Dialog>
-            <ID>6</ID>
+            <ID>4</ID>
             <Name>dDialog6</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -3135,13 +3024,13 @@ return
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
-                <Text xml:space="preserve">Fase clinica</Text>
+                <Text>Descubrimiento</Text>
                 <Show>False</Show>
                 <Say>True</Say>
               </DialogOption>
               <DialogOption>
                 <ID>5</ID>
-                <Text>Descubrimiento</Text>
+                <Text xml:space="preserve">Fase clinica</Text>
                 <Show>False</Show>
                 <Say>True</Say>
               </DialogOption>
@@ -3154,7 +3043,7 @@ return
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>7</ID>
+            <ID>5</ID>
             <Name>dDialog7</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -3176,7 +3065,7 @@ stop
             <DialogOptions />
           </Dialog>
           <Dialog>
-            <ID>8</ID>
+            <ID>6</ID>
             <Name>dDialog8</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -3200,7 +3089,7 @@ stop
             <DialogOptions />
           </Dialog>
           <Dialog>
-            <ID>9</ID>
+            <ID>7</ID>
             <Name>dDialog9</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -3283,7 +3172,7 @@ return
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>10</ID>
+            <ID>8</ID>
             <Name>dDialog10</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -3305,7 +3194,7 @@ stop
             <DialogOptions />
           </Dialog>
           <Dialog>
-            <ID>11</ID>
+            <ID>9</ID>
             <Name>dDialog11</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -3324,7 +3213,7 @@ stop
             <DialogOptions />
           </Dialog>
           <Dialog>
-            <ID>12</ID>
+            <ID>10</ID>
             <Name>dDialog12</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -3341,7 +3230,7 @@ stop
             <DialogOptions />
           </Dialog>
           <Dialog>
-            <ID>13</ID>
+            <ID>11</ID>
             <Name>dDialog13</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -3369,7 +3258,7 @@ stop
             <DialogOptions />
           </Dialog>
           <Dialog>
-            <ID>14</ID>
+            <ID>12</ID>
             <Name>dDialog14</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
