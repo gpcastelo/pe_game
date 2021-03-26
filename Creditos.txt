@@ -1,0 +1,31 @@
+De dónde vienen los fármacos es un juego creado con fines académicos por el grupo 4 de la asignatura
+"Responsible Research and Science Communication", del máster Multidisciplinary Research in Experimental
+Sciences, del centro Barcelona Institute of Technology, afiliado a la Universitat Pompeu Fabra.
+
+Es totalmente gratuito.
+
+Tiene licencia CreativeCommons no comercial y de atribución.
+
+La información presentada sobre las fases del desarrollo de fármacos ha sido obtenida de fuentes oficiales
+y de publicaciones científicas.
+
+En ningún momento se recompila información del uso del presente juego. Es totalmente offline.
+
+Para su programación se ha utilizado el programa Adventure Game Studio. Más información en
+https://www.adventuregamestudio.co.uk/site/ags/
+
+Toda la programación del videojuego es obra del grupo.
+
+Todas las imágenes (personajes, objetos, fondos...) que aparecen en el presente título son obra 
+del grupo de estudiantes. Ninguna se ha obtenido de terceras fuentes, a excepción de la figura
+de la llave, que venía incluida en el editor de Adventure Game Studio. 
+
+Los iconos del cursor (flecha, reloj, zapato, lupa, mano y símbolo !?) también pertenecen a Adventure Game Studio.
+
+En cuanto a los sonidos utilizados, se han obtenido de la página web https://freesound.org
+Estos sonidos, con licencia Creative Commons, pertenecen a sus respectivos autores, a saber:
+- Sonido de introducción al juego: XF3DeX (https://freesound.org/people/XF3DeX/sounds/317325/)
+- Sonido de presentación del título: yummie (https://freesound.org/people/yummie/sounds/410574/)
+- Sonido de obtención de objetos: danlucaz (https://freesound.org/people/danlucaz/sounds/517754/)
+- Sonido de transición de habitaciones: danlucaz (https://freesound.org/people/danlucaz/sounds/517761/)
+

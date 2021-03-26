@@ -1,0 +1,30 @@
+"De dónde vienen los fármacos" tiene una mecánica muy sencilla.
+
+Al principio del juego, tendrás el control de AAS3.14. 
+Fíjate en el símbolo que aparece al lado del cursor:
+(para cambiar entre estos, simplemente desliza la rueda del ratón)
+
+- Zapato: puedes mover a AAS3.14 de sitio.
+- Lupa: podrás inspeccionar ciertos objetos.
+- Mano: podrás coger ciertos objetos.
+- !?: podrás hablar con los personajes del juego.
+
+Estos también se pueden seleccionar acercando el cursor a la parte superior de la pantalla, 
+y aparecerá un menú.
+
+Para realizar una de estas acciones, simplemente selecciona el símbolo y 
+haz click izquierdo sobre un punto (puede ser un personaje, un objeto,...).
+
+Además, ¡puedes usar objetos que vayas encontrando! 
+En el menú superior hay un maletín. Haz click izquierdo sobre él y abrirás tu inventorio.
+Los objetos que vayas recogiendo se guardarán ahí (hasta que los uses).
+Para utilizar uno de estos, haz click izquierdo sobre él en el inventario.
+Verás que el cursor muestra el objeto que has seleccionado. 
+Cierra el inventario y podrás utilizar el objeto, haciendo click izquierdo sobre ciertos objetos o personajes
+(quizá haya una llave que abra puertas, o una nota que debes entregar a alguien).
+
+Si quieres salir del juego, haz click izquierdo sobre el icono a la derecha del menú superior
+(con la forma del botón de encendido). O simplemente cierra la ventana del juego.
+
+Eso es lo más importante que debes saber, si quieres más información envíanos un mensaje a instagram:
+@farmacorigen
