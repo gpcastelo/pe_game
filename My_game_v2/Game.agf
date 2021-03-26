@@ -68,7 +68,7 @@
       <DefaultRoomMaskResolution>1</DefaultRoomMaskResolution>
       <GameExplorerEnabled>False</GameExplorerEnabled>
       <Description />
-      <ReleaseDate>2018-01-01</ReleaseDate>
+      <ReleaseDate>2021-03-26</ReleaseDate>
       <Genre>Adventure</Genre>
       <Version>1.0.0.0</Version>
       <WindowsExperienceIndex>1</WindowsExperienceIndex>
@@ -2630,8 +2630,8 @@
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
             <StartingRoom>6</StartingRoom>
-            <StartX>250</StartX>
-            <StartY>160</StartY>
+            <StartX>225</StartX>
+            <StartY>180</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>3</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
